@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title> <!-- o Title é o que aparece na barra do site -->
+</head>
+<body>
+    <p><h2>Formulário de cadastro</h2></p>
+    <form action="" method="Post">
+
+    <table> <!--Tabela-->
+
+        <tr> <!--Cria uma linha na tavela -->
+                <td> <label for="Nome">Nome</label> </td> <!-- nova coluna-->
+                <td> <label for="Sobrenome">Sobrenome</label> </td>
+        </tr>
+
+         <tr> <!-- tr == Cria uma linha na tavela E o td são celulas dentro das linhas-->
+                 <td><input type="text" id="Nome" name="Nome" placeholder="Nome" required="true" ></td> <!--Recebe os valores de entrada-->
+                 <td><input type="text" id="Sobreome" name="Sobrenome" placeholder="Sobrenome" required="true"></td>    
+         </tr>
+
+        <tr>
+                <td><label for="Email">Email</label></td>
+                <td><label for="DataNasc">Data de Nascimento</label></td>
+        </tr>
+               <td><input type="email" id="Email" name="Email" placeholder="Email"required="true"></td>
+                <td><input type="date" name="DataNasc" id="DataNasc" required="true"></td>
+        </tr> 
+        <tr>
+            <td><label for="endereço">Endereço</label></td>
+            <td><label for="Estado">Estado</label></td>
+        </tr>
+        <tr>
+            <td><input type="text"name = "Endereço" id="Endereço" placeholder="Endereço"required="true"></td>
+            <td>
+                <select name="estado" id="Estado" required="true" > 
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espirito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+            </select></td>
+        </tr>  
+        <tr>
+            <td><label for="cidade"></label>Cidade</td>
+            <td><label for="CEP"></label>CEP</td>
+        </tr>        
+        <TR>
+            <td><input type="text"name="cidade" id="cidade" placeholder="Cidade"required="true"></td>
+            <td><input type="number"name="cep" id="cep" placeholder="CEP"required="true"  ></td>
+        
+        </TR>    
+        <tr>
+            <tr>
+                <td><label for="Profissão">Profissão</label></td>
+            </tr>
+
+        <tr>
+            <td><input type="text"name="profile" id="Profissão" value="" placeholder="Profissão" required="true" ></td>
+        </tr>
+            <td><label for="descrição">Descrição</label></td>
+            
+        </tr>
+        <tr>
+            <td><textarea name="Descrição" id="Descrição" placeholder="Descreva" cols="20" rows="5" required="true"></textarea></td>
+        </tr>
+        <tr>
+            <td><input type="submit" name="submit" value="Enviar" id="Enviar"></td>
+        </tr>
+
+  </table>
+
+   </form>
+</body>
+</html>
