@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Estilizado </title>
+    <style>
+            /* Estilos baseados em seletores de componentes/* */
+                                  
+            div{ /*muldura do formulario*/
+                width:50%;
+                height:600px; 
+                background-color: bisque;
+                margin: 0 auto;
+                padding: 10px;
+                border: 1px solid blueviolet
+            }
+
+            label{
+                color: cadetblue;
+                font: size 18px;
+                text-align: center;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            }
+            legend { 
+            text-align: center;
+            color: blue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 25px;
+            }
+            form{ 
+            display: flex;
+            flex-direction: column;   }      
+            
+                    /* Estilos basedados em seletores de classe*/
+                .dados{ padding:12px 20px; 
+                        margin: 8px 0;
+                        display: flex;
+                        border: 1px solid blue 
+                        box-sizing border-box;                                     
+                }
+
+                .dados:hover{ background-color:rgb(219, 219, 252) ;
+                }
+
+            /* Estilos basedados em seletores de ID*/
+            #button{
+                        background-color:cadetblue;
+                        border: none;
+                        color: white;
+                        margin: 4px 2px;
+                        padding:15px 32px;
+                        cursor: pointer;
+                        text-align: center;
+                        display: block;
+
+            }
+            /* toda vez que passo o cursor em cima do botão, o mesmo muda de cor*/
+         #button:hover { 
+             background-color: rgb(99, 99, 215);
+                }
+
+        
+    </style>
+</head>
+<body>
+
+    <div>
+        <form action="" >
+            <legend >Formulario de cadastro </legend>
+            <label for="Nome" >Nome</label>
+                <input type="text" name="nome" id="nome" class="dados"></input>
+            <label for="Sobrenome">Sobrenome</label>
+                <input type="text" name="sobrenome" id= "sobrenome"class="dados"></input>
+            <label for="data">Data de Nascimento</label>
+                <input type="date" name="data" id="data"class="dados"></input> 
+            <label for="email" >email</label>
+                <input type="email" name="email" id="email" class="dados"></input>
+            <label for="senha" >senha</label>
+                <input type="password" name="senha" id="senha"class="dados"></input>
+            <label for="Confirmar" >Confirmar senha</label>
+                <input type="password" name="confirmar" id="confirmar"class="dados"></input>
+            
+                <input type="submit"  id="button" value="Confirmar" onclick="getData()"class="dados"> </input>
+
+        </form>
+    </div>
+</body>
+<script>
+    function getData(){
+        var nome = document.getElementById("nome"). value;
+        var sobrenome = document.getElementById("sobrenome"). value;
+        var email = document.getElementById("email").value;
+        var data = document.getElementById("data").value;
+        var senha = document.getElementById("senha"). value;
+        var confirmar = document.getElementById("confirmar"). value;
+    
+        alert("Nome: " + nome + "\nSobrenome: " + sobrenome + "\nEmail: " + email + "\nData de nascimento: " + data +  confirmar);
+    }
+
+
+</script>
+</html>
