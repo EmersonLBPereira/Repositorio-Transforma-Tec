@@ -7,21 +7,21 @@
     <title>Meu site responsivo</title>
     
     <style>
-        * {
-            box-sizing: border-box;
+        * { 
+            box-sizing: border-box;  /* manter tamanho da DIV*/
         }
 
         html {
-            font-family: "Lucida Sans", sans-serif;
+            font-family: "Lucida Sans", sans-serif; /* muda a fonte*/
         }
 
         body{
-            background-color: bisque;
+            background-color: bisque; /* Muda a cor do corpo*/
         }
 
-        [class*="col-"]{
+        [class*="col-"]{ /* tudo que for da classe col-, tera essas caracteristica */
             float: left;
-            padding: 15px;
+            padding: 15px; /* descola 15 pixel*/
         }
 
         .row::after {
@@ -35,7 +35,7 @@
             color: antiquewhite;
             padding: 15px;
         }
-
+ 
         .menu ul{
             list-style-type: none;
             margin: 0;
@@ -53,7 +53,7 @@
             background-color: lightblue;
         }
 
-        .aside{
+        .aside{ /*lateral */
             background-color: cadetblue;
             color: chocolate;
             text-align: center;
