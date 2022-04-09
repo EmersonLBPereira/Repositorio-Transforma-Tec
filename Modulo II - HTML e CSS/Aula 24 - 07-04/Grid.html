@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Grid Layout</title>
+    <style>
+        .container{ /* estilização da Div principal*/
+            display:grid;
+            grid-template-columns: 100px 100px; /*quantas colunas eu quero*/
+            grid-gap: 10px; /*separação do grid*/
+            background-color:burlywood; /* define a cor da div*/
+            
+        }
+
+        .box{
+            background-color: yellowgreen; 
+            height: 100px;
+            width: 100px;
+            line-height: 100%;
+
+        }
+
+        .b{
+            background-color: rgb(136, 196, 215);
+            height: 150px;
+            width: 100px;
+        }
+
+        .f{
+            background-color: antiquewhite;
+            height: 150px;
+            width: 100px;
+        }
+        .g{
+            background-color:aqua;
+            height: 150px;
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container"> 
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+        <div class="box d">D</div>
+        <div class="box e">E</div>
+        <div class="box f">F</div>
+        <div class="box g">G</div
+    </div>
+
+</body>
+</html>
