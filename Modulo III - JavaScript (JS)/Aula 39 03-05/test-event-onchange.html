@@ -6,30 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event-onchange</title>
 </head>
+
 <body>
     
-<p>Selecione o seu artista preferido</p>
+        <p>Selecione o seu artista preferido</p>
 
-<select  id="artistas" onchange="selecionarArtista()">
+        <select  id="artistas" onchange="selecionarArtista()">
 
-    <option value="selecione o artista!"></option>    
-    <option value="Raimundos">Raimundos</option>
-    <option value="Tim Maia">Tim Maia</option>
-    <option value="Bezerra da silva">Bezerra da silva</option>
-    <option value="Legião Urbana">Legião Urbana</option>
-    <option value="O Rappa">O Rappa</option>
-    
-</select>
-    <p id="resultado">Artista não selecionado </p>
-    
+            <option value="selecione o artista!"></option>    
+            <option value="Raimundos">Raimundos</option>
+            <option value="Tim Maia">Tim Maia</option>
+            <option value="Bezerra da silva">Bezerra da silva</option>
+            <option value="Legião Urbana">Legião Urbana</option>
+            <option value="O Rappa">O Rappa</option>
+            
+        </select>
+            <p id="resultado">Artista não selecionado </p>
+            
 
-<script>
-    function selecionarArtista(){
-        let artista = document.getElementById("artistas").value
+        <script>
+            function selecionarArtista(){
+                let artista = document.getElementById("artistas").value
 
-        document.getElementById("resultado").innerHTML="Música da boa: " +" "+ artista
-    }
-</script>
+                document.getElementById("resultado").innerHTML="Música da boa: " +" "+ artista
+            }
+        </script>
 
 </body>
 </html>

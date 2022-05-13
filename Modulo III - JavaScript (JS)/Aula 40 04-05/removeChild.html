@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="item" placeholder="Novo item">
+    <button onclick="inserirItem()">Inserir</button>
+
+    <input type="number" id="indice" placeholder="Indice do item removido">
+    <button onclick="removerItem()">Remover</button>
+
+    <ul id="minhalista">
+    </ul>
+	
+    <script>
+        function inserirItem(){
+
+            const item = document.getElementById("item").value // pega o valor inserido no campo
+
+            let novoItem = document.createElement("li") // criação de novo elemento que recebe o texto do "item"
+
+            let noTexto = document.createTextNode(item); // recebe valor do campo
+
+            novoItem.appendChild(noTexto)
+
+            let lista = document.getElementById("minhalista") // os itens são colocados dentro da lista
+
+            lista.insertBefore(novoItem,lista.children[0]) 
+
+
+        }
+
+
+        function removerItem(){
+            let indice = document.getElementById("indice").value // pega o valor do indice
+
+            const lista = document.getElementById("minhalista") // pega valores da minhalista
+
+            indice = Number(indice) // 
+
+            lista.removeChild(lista.children[indice]) // remove item da lista
+        }
+    </script>
+
+</body>
+</html>

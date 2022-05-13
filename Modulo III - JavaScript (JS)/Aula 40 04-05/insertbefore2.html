@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="item" placeholder="Novo item">
+
+    <button id="inserir" onclick="inserirItem()">
+        Inserir
+    </button>
+
+    <ul id="minhalista">
+        <li>Café</li>
+        <li>Leite</li>
+        <li>Manteiga</li>
+        <li>Pão francês</li>
+    </ul>
+
+    <script>
+
+        function inserirItem(){
+
+            let item = document.getElementById("item").value
+
+            let novoItem = document.createElement("li")
+
+            let noTexto = document.createTextNode(item);
+
+            novoItem.appendChild(noTexto)
+
+            let lista = document.getElementById("minhalista")
+
+            lista.insertBefore(novoItem,lista.children[0])// firstchild / lastchild
+        }
+
+    </script>
+</body>
+</html>
