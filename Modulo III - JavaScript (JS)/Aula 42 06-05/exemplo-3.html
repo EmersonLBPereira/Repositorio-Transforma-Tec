@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">
+        <input type="text" id="name">
+        <input type="submit" name="btn" id="btn" onclick="setName()" value="Registrar">
+        <input type="submit" name="btn" id="btn" value="Remover"  onclick="remove();"> 
+
+    </div>
+</body>
+
+<script>
+
+    //criandop um elemento "p" na pagina, atraves do HTML dinamico/DOM
+    var para = document.createElement("p")
+ 
+
+    para.innerHTML = "Parágrafo dinâmico"
+   
+    para.style.color = "cadetblue"
+    para.style.fontFamily = "Arial"
+    para.style.fontSize = "50px"
+    para.style.border = "10px solid"
+    
+    // atribuindo o atributo id para a variavel "para"
+    para.setAttribute("id","para")
+
+    document.getElementById("container").appendChild(para)
+
+    //função para remover o paragrafo criado pelo Dom
+    function remove(){
+
+        var para = document.getElementById("para")
+
+        para.parentNode.removeChild(para) // 'parentNode' é o nó "pai", nesse caso é a DIV
+    }
+
+    function setName(){
+            var name = document.getElementById("name").value
+
+            var para = document.createElement("p")
+
+            para.innerHTML = name
+            para.style.color = "cadetblue"
+            para.style.fontFamily = "Arial"
+
+            para.setAttribute("id","para")
+
+            document.getElementById("container").appendChild(para)
+        }
+        
+</script>
+
+

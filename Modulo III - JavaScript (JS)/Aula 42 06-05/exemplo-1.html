@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EXEMPLO 1</title>
+</head>
+<body>
+
+    <div class="container" id="container">
+
+        <input type="text" name="name" id="name" placeholder="Nome">
+
+        <input type="password" name="password" id="password" placeholder="Senha">
+
+        <input type="submit" id="submit" onclick="ola()">
+    </div>
+    
+</body>
+
+
+<script>
+    // Buncando elementos pelo Dom
+    function ola(){
+        var nome = document.getElementById("name").value // tras o valor exato do atributo "name"
+
+        var senha = document.getElementById("password").value
+
+        
+
+        console.log("Nome: ", nome, " Senha: ",senha)
+
+        console.log(document.getElementsByTagName("input"))
+
+        console.log(document.querySelector("input"))
+
+      
+    }
+
+
+</script>
+</html>
