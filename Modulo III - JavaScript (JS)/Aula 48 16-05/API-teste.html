@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Consulta JSONPlaceholder</title>
+</head>
+<body>
+
+    <div>
+        <p id="todos"></p>
+    </div>
+
+    <script>
+        const todo_url = `https://jsonplaceholder.typicode.com/todos`
+        fetch(todo_url)
+        //resultado da promessa de retorno do dado pesquisado do servidor
+        .then(response => response.json())
+        //resultado da promessa de converter o dado retornado do servidor para JSON
+        .then((json) => {
+            //apresentação dos dados retornados do servidor
+            document.getElementById("todos").innerHTML = "TODOS: " + JSON.stringify(json)
+            
+        })
+        .catch(err => console.log(erro))
+    </script>
+</body>
